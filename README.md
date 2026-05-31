@@ -1,7 +1,6 @@
 # MediCheck PK — Bilingual AI Health Assistant (Groq)
 
-**Author:** Eman Ijaz
-**Author:** Anamta Gohar
+**Author:** Eman Ijaz & Anamta Gohar
 
 **License:** ISC  
 
