@@ -1,6 +1,8 @@
 # MediCheck PK — Bilingual AI Health Assistant (Groq)
 
+**Author:** Eman Ijaz
 **Author:** Anamta Gohar
+
 **License:** ISC  
 
 MediCheck PK is a lightweight, chat-based AI health assistant built for **Pakistani patients** to help them explain symptoms clearly before visiting a doctor. It works in **English + Urdu (including Roman Urdu)**, asks **one question at a time**, and generates a **doctor-ready medical summary** that can be copied and shared during a consultation.
@@ -273,3 +275,4 @@ This project is licensed under the **ISC License**.
 
 ## Author
 **Anamta Gohar**
+**Eman Ijaz**
