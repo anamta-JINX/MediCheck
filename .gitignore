@@ -34,4 +34,4 @@ build/
 temp/
 
 # Optional: local static exports
-out/
+out/Demo/
