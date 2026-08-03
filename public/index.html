@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MediCheck PK — AI Health Assistant</title>
+  <link rel="icon" type="image/png" href="/assets/Medi-Check-logo.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -193,7 +194,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="text-navy font-extrabold text-xl tracking-tight">Medi<span class="text-green">Check</span> <span class="text-sm font-semibold text-muted">PK</span></div>
+  <div class="flex items-center gap-3">
+    <img src="/assets/Medi-Check-logo.png" alt="MediCheck logo" class="w-10 h-10 object-contain"/>
+    <div class="text-navy font-extrabold text-xl tracking-tight">Medi<span class="text-green">Check</span> <span class="text-sm font-semibold text-muted">PK</span></div>
+  </div>
   <div class="flex items-center gap-2">
     <a href="#how" class="hidden md:inline text-muted hover:text-green text-sm font-medium transition-colors px-3 py-1">How it works</a>
     <a href="#chat" class="hidden md:inline text-muted hover:text-green text-sm font-medium transition-colors px-3 py-1">Try it</a>
@@ -450,8 +454,11 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-navy text-white/40 text-center py-7 px-[5%] text-sm">
-  <span class="text-green font-semibold">MediCheck PK</span> — Improving rural healthcare access in Pakistan
+<footer class="bg-navy text-white/40 py-7 px-[5%] text-sm">
+  <div class="flex items-center justify-center gap-3">
+    <img src="/assets/Medi-Check-logo.png" alt="MediCheck logo" class="w-9 h-9 object-contain"/>
+    <div><span class="text-green font-semibold">MediCheck PK</span> — Improving rural healthcare access in Pakistan</div>
+  </div>
 </footer>
 
 <script>
