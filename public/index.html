@@ -462,8 +462,8 @@
 </footer>
 
 <script>
-  const API_URL = 'http://localhost:3000/chat';
-  const GROQ_MODEL = 'llama-3.3-70b-versatile';
+  const API_URL = '/api/chat';
+  const GROQ_MODEL = 'openai/gpt-oss-20b';
 
   const SYSTEM_PROMPT = `You are MediCheck, a compassionate AI health assistant for Pakistani patients. Your job is to collect symptom information step by step to prepare a medical summary before a doctor visit.
 
@@ -610,7 +610,11 @@ Start by greeting warmly in both languages and asking for their main complaint.`
         })
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get('content-type') || '';
+      const data = contentType.includes('application/json')
+        ? await response.json()
+        : { error: await response.text() };
+
       removeTyping();
 
       const reply =
@@ -620,12 +624,17 @@ Start by greeting warmly in both languages and asking for their main complaint.`
         data?.error ||
         'No response from server.';
 
+      if (!response.ok) {
+        throw new Error(reply);
+      }
+
       conversationHistory.push({ role: 'assistant', content: reply });
       addMessage('ai', reply);
 
     } catch (err) {
       removeTyping();
-      addMessage('ai', 'Connection error. Please check your server and try again.');
+      console.error('MediCheck chat error:', err);
+      addMessage('ai', err?.message || 'Connection error. Please try again.');
     } finally {
       isLoading = false;
       document.getElementById('sendBtn').disabled = false;
